@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 # This list stores our chat history in memory
 # Each message is a dict: {'sender': 'Name', 'text': 'Hello', 'time': '10:00 AM'}
+#Comment by Rakesh
 messages = []
 
 HTML_TEMPLATE = """
