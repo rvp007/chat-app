@@ -17,7 +17,7 @@ HTML_TEMPLATE = """
     <title>Anonymous Chat Hub</title>
     <style>
         body { font-family: 'Segoe UI', sans-serif; background: #2c3e50; margin: 0; display: flex; justify-content: center; height: 100vh; }
-        .chat-container { width: 100%; max-width: 600px; background: #ecf0f1; display: flex; flex-direction: column; height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .chat-header { width: 100%; max-width: 600px; background: #ecf0f1; display: flex; flex-direction: column; height: 100vh; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
         
         /* Header */
         header { background: #34495e; color: white; padding: 15px; text-align: center; font-weight: bold; font-size: 1.2rem; }
@@ -44,12 +44,12 @@ HTML_TEMPLATE = """
 </head>
 <body>
 
-    <div class="chat-container">
+    <div class="chat-header">
         <header>The Hub</header>
         <div id="chat-window">
             </div>
         <div class="input-area">
-            <input type="text" id="username" placeholder="Name" value="Anon">
+            <input type="text" id="username" placeholder="Name" value="Anonymous">
             <input type="text" id="msg-input" placeholder="Type a message..." autocomplete="off">
             <button onclick="sendMessage()">Send</button>
         </div>
@@ -68,7 +68,7 @@ HTML_TEMPLATE = """
         // 1. Send Message
         function sendMessage() {
             const text = msgInput.value.trim();
-            const name = usernameInput.value.trim() || "Anon";
+            const name = usernameInput.value.trim() || "Anonymous";
             
             if (!text) return;
 
